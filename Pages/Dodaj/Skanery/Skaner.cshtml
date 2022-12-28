@@ -1,0 +1,53 @@
+﻿@page
+@model ScannerWeb.Pages.Skanery.SkanerModel
+@{
+    
+    <div class="mb-4">
+        <span class="display-6">Dodaj dane dla nowego skanera:</span>
+    </div>
+    
+    <div class="mb-3 row">
+        <label for="idSkanera" class="col-form-label col-sm-2">Id Skanera</label>
+        <input type="text" class="col-form-control col-sm-4" id="idSkanera" placeholder="Podaj ID skanera:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="idBudynku" class="col-form-label col-sm-2">Id Budynku</label>
+        <input type="text" class="col-form-control col-sm-4" id="idBudynku" placeholder="Podaj ID budynku:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="typAutoryzacji" class="col-form-label col-sm-2">Typ autoryzacji (karta/kod)</label>
+        <input type="text" class="col-form-control col-sm-4" id="typAutoryzacji" placeholder="Podaj typ autoryzacji:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="kodOtwarcia" class="col-form-label col-sm-2">Kod otwarcia</label>
+        <input type="text" class="col-form-control col-sm-4" id="kodOtwarcia" placeholder="Podaj kod wymagany do otwarcia:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="poziomDostepu" class="col-form-label col-sm-2">Poziom dostępu</label>
+        <input type="text" class="col-form-control col-sm-4" id="poziomDostepu" placeholder="Podaj poziom dostępu:">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+   
+    /*  TRYBUSOWE
+     
+    <fieldset>
+            <label asp-for="Name">Machine name</label>
+            <input asp-for="Name" placeholder="name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <br />
+            <label asp-for="LaunchDate">Launch date</label>
+            <input asp-for="LaunchDate" />
+            <span asp-validation-for="LaunchDate" class="text-danger"></span>
+            <br />
+            <label asp-for="Operational">Operational</label>
+            <input asp-for="Operational" />
+            <span asp-validation-for="Operational" class="text-danger"></span>
+            <br />
+            <input type="submit" value="Create" id="submitButton" />
+    </fieldset>*/
+}

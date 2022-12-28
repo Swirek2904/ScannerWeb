@@ -1,0 +1,44 @@
+﻿@page
+@model ScannerWeb.Pages.Dodaj.Pracownik.PracownikModel
+@{
+    <div class="mb-4">
+        <span class="display-6">Dodaj dane dla nowego pracownika:</span>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="idPracownik" class="col-form-label col-sm-2">Id Pracownika</label>
+        <input type="text" class="col-form-control col-sm-4" id="validationCustom01" placeholder="Podaj ID pracownika:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="imie" class="col-form-label col-sm-2">Imię</label>
+        <input type="text" class="col-form-control col-sm-4" id="imie" placeholder="Podaj imię pracownika:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="nazwisko" class="col-form-label col-sm-2">Nazwisko</label>
+        <input type="text" class="col-form-control col-sm-4" id="nazwisko" placeholder="Podaj nazwisko pracownika:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="pesel" class="col-form-label col-sm-2">Pesel</label>
+        <input type="text" class="col-form-control col-sm-4" id="pesel" placeholder="Podaj pesel pracownika:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="numerTelefonu" class="col-form-label col-sm-2">Numer telefonu</label>
+        <input type="text" class="col-form-control col-sm-4" id="numerTelefonu" placeholder="Podaj nr tel pracownika:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="idKarty" class="col-form-label col-sm-2">Id karty</label>
+        <input type="text" class="col-form-control col-sm-4" id="idKarty" placeholder="Podaj ID karty pracownika:">
+    </div>
+
+    <div class="mb-3 row">
+        <label for="poziomDostepu" class="col-form-label col-sm-2">Poziom dostępu</label>
+        <input type="text" class="col-form-control col-sm-4" id="poziomDostepu" placeholder="Podaj poziom dostępu dla pracownika:">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+}

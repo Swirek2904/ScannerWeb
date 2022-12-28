@@ -16,8 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Krystian\source\repos\ScannerWeb\ScannerWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Dodaj/Budynek/Budynek.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9kYWpcQnVkeW5la1xCdWR5bmVrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Dodaj/Pracownik/Pracownik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9kYWpcUHJhY293bmlrXFByYWNvd25pay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Dodaj/Skanery/Skaner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9kYWpcU2thbmVyeVxTa2FuZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Historia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Index.cshtml]
