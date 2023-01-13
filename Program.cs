@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using ScannerWeb.Models;
+using System;
+
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ScannerDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("db")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();

@@ -1,24 +1,28 @@
 ﻿@page
 @model ScannerWeb.Pages.Dodaj.Budynek.BudynekModel
 @{
+    <form method="post">
     <div class="mb-4">
         <span class="display-6">Dodaj dane dla nowego Budynku:</span>
     </div>
 
-    <div class="mb-3 row">
-        <label for="idSkanera" class="col-form-label col-sm-2">Id Budynku</label>
-        <input type="text" class="col-form-control col-sm-4" id="idBudynku" placeholder="Podaj ID Budynku:">
-    </div>
+        <!--<div class="mb-3 row">
+            <label for="nazwa" class="col-form-label col-sm-2">Nazwa</label>
+            <input asp-for="Nazwa" type="text" class="col-form-control col-sm-4" id="Nazwa" placeholder="Podaj nazwę budynku:">
+            <span asp-validation-for="Nazwa" class="text-danger"></span>
+        </div>-->
 
     <div class="mb-3 row">
         <label for="nazwa" class="col-form-label col-sm-2">Nazwa</label>
-        <input type="text" class="col-form-control col-sm-4" id="nazwa" placeholder="Podaj nazwę budynku:">
+        <input asp-for="Nazwa" type="text" class="col-form-control col-sm-4" id="Nazwa" placeholder="Podaj nazwę budynku:">
+        <span asp-validation-for="Nazwa" class="text-danger"></span>
     </div>
-
     <div class="mb-3 row">
         <label for="idSkanera" class="col-form-label col-sm-2">Id Skanera</label>
-        <input type="text" class="col-form-control col-sm-4" id="idSkanera" placeholder="Podaj ID Skanera:">
+        <input asp-for="idSkanera" type="text" class="col-form-control col-sm-4" id="idSkanera" placeholder="Podaj ID Skanera:">
+        <span asp-validation-for="idSkanera" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Dodaj</button>
+    <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton" />
+    </form>
 }

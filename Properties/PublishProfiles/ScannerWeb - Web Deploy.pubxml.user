@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu internetowego. Możesz dostosować zachowanie tego procesu
+ poprzez edycję tego pliku MSBuild. Aby dowiedzieć się więcej o tym działaniu, odwiedź stronę https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0bnCOKsKNUWwnSB0P38C3QAAAAACAAAAAAAQZgAAAAEAACAAAACu3omTNSJ1QgjwyDvtbwdDzkIB4NxKWBuEkKzNpMlgDgAAAAAOgAAAAAIAACAAAACbeqOQ0E7lgKtTwtwe8E0JRkjiOmvwGqpZPhM1MGlt5oAAAACBvhwa9ozLW/lFr1cct/vuxSWBMG9w2gJhJqM7mB09dlQj5+J9dVdPB5Un6g1f3LgaPIZ4KXpS59rRORiHUdBZncyiC2xd2VQ81mdju5+Rzc3+mg0QSkAUlWiWpvHzD6RaK5y/l9xdvS02NvpAt55tOQBQYxbUYLRcj7uucItcQkAAAADXdRgN2Jncej/pQA1GZ5bEda6O8xIjQZDn23q8zJx4vfRZ99cLFkDjnpcEkcnVOU8ocK78RDYssnf+c0zpBZDm</EncryptedPassword>
+    <History>True|2023-01-13T01:12:59.0616034Z;True|2023-01-13T00:48:43.7380775+01:00;True|2023-01-12T01:30:53.9269060+01:00;True|2023-01-12T01:26:50.7056906+01:00;False|2023-01-12T01:26:11.0179603+01:00;True|2023-01-12T01:10:26.7947366+01:00;True|2023-01-11T20:51:06.9488506+01:00;True|2023-01-11T19:45:47.4761984+01:00;True|2023-01-11T19:38:56.7533623+01:00;False|2023-01-11T19:38:14.3345924+01:00;True|2023-01-07T22:56:10.9890584+01:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="ScannerWeb.Models.ScannerDbContext">
+      <Value>Server=tcp:scanner3eadi-server.database.windows.net,1433%3bInitial Catalog=ScannerDB%3bPersist Security Info=False%3bUser ID=scannerAdmin%3bPassword=projektskaner123%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
