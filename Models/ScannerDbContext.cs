@@ -12,9 +12,8 @@ public partial class ScannerDbContext : DbContext
 
     public ScannerDbContext(DbContextOptions<ScannerDbContext> options)
         : base(options)
-    { }
-
-
+    {
+    }
 
     public virtual DbSet<Budynek> Budyneks { get; set; }
 
@@ -59,7 +58,7 @@ public partial class ScannerDbContext : DbContext
             entity.Property(e => e.IdOsoby).HasColumnName("idOsoby");
             entity.Property(e => e.IdSkanera).HasColumnName("idSkanera");
             entity.Property(e => e.TypAutoryzacji)
-                .HasMaxLength(1)
+                .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("typAutoryzacji");
 
@@ -116,7 +115,6 @@ public partial class ScannerDbContext : DbContext
 
             entity.HasOne(d => d.IdKartyNavigation).WithMany(p => p.Pracowniks)
                 .HasForeignKey(d => d.IdKarty)
-                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("idKartyFK");
         });
 

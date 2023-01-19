@@ -3,4 +3,7 @@
   <parameter name="IIS Web Application Name" description="" value="ScannerWeb" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Krystian\\source\\repos\\ScannerWeb\\ScannerWeb\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
   </parameter>
+  <parameter name="ScannerWeb.Models.ScannerDbContext" description="" value="Server=tcp:scanner3eadi-server.database.windows.net,1433;Initial Catalog=ScannerDB;Persist Security Info=False;User ID=scannerAdmin;Password=projektskaner123@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\Krystian\\source\\repos\\ScannerWeb\\ScannerWeb\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\ScannerWeb\.Models\.ScannerDbContext\.sql$" />
+  </parameter>
 </parameters>
