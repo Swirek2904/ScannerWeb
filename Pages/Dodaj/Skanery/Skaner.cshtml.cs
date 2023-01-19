@@ -14,49 +14,21 @@ namespace ScannerWeb.Pages.Skanery
         {
             this.db = db;
         }
-        public IActionResult OnPost()
-        {
-            if (string.IsNullOrWhiteSpace(idBudynku.ToString()))
-            {
-                ModelState.AddModelError("idBudynku", "Wpisz id budynku !");
-                
-            }
-            if (string.IsNullOrWhiteSpace(typAutoryzacji))
-            {
-                ModelState.AddModelError("typAutoryzacji", "Wpisz typ autoryzacji !");
-                
-            }
-            if (string.IsNullOrWhiteSpace(kodOtwarcia.ToString()))
-            {
-                ModelState.AddModelError("kodOtwarcia", "Wpisz kod otwarcia !");
-               
-            }
-            if (string.IsNullOrWhiteSpace(poziomDostepu))
-            {
-                ModelState.AddModelError("poziomDostepu", "Wpisz poziom dostêpu !");
-                return Page();
-            }
+        [BindProperty]
+        public Models.Skaner Skaner { get; set; }
+        public async Task<IActionResult> OnPostAsync()
+        { 
             db.Skaners.Add(new Models.Skaner
             {
-                IdBudynku = this.idBudynku,
-                TypAutoryzacji = this.typAutoryzacji,
-                KodOtwarcia = this.kodOtwarcia,
-                PoziomDostepu = this.poziomDostepu
+                IdBudynku = this.Skaner.IdBudynku,
+                TypAutoryzacji = this.Skaner.TypAutoryzacji,
+                KodOtwarcia = this.Skaner.KodOtwarcia,
+                PoziomDostepu = this.Skaner.PoziomDostepu
             });
-            db.SaveChanges();
-            return Page();
+            await db.SaveChangesAsync();
+
+            return RedirectToPage("/Success");
         }
-       
-        
-        public int idSkanera { get; set; }
-        [BindProperty]
-        public int idBudynku { get; set; }
-        [BindProperty]
-        public string? typAutoryzacji { get; set; } 
-        [BindProperty]
-        public int kodOtwarcia { get; set; }
-        [BindProperty]
-        public string? poziomDostepu { get; set; }
 
     }
 }

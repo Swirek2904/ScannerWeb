@@ -18,32 +18,18 @@ namespace ScannerWeb.Pages.Dodaj.Budynek
 		{
 			this.db = db;
 		}
-		public IActionResult OnPost()
+        [BindProperty]
+        public Models.Budynek Budynek { get; set; }
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (string.IsNullOrWhiteSpace(Nazwa))
-            {
-                ModelState.AddModelError("Nazwa", "Wpisz nazwe budynku!");
-                return Page();
-            }
-            if (string.IsNullOrWhiteSpace(idSkanera.ToString()))
-            {
-                ModelState.AddModelError("idSkanera", "Wpisz id skanera!");
-                return Page();
-            }
-            
             db.Budyneks.Add(new Models.Budynek
             {
-                Nazwa = this.Nazwa,
-                IdSkanera = this.idSkanera
+                Nazwa = this.Budynek.Nazwa,
+                IdSkanera = this.Budynek.IdSkanera
             });
-			db.SaveChanges();
-			return Page();
+            await db.SaveChangesAsync();
+
+            return RedirectToPage("/Success");
         }
-        [BindProperty]
-		public int idBudynku { get; set; }
-		[BindProperty]
-        public string? Nazwa { get; set; }
-        [BindProperty]
-        public int idSkanera { get; set; }
 	}
 }

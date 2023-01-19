@@ -20,8 +20,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9kYWpcQnVkeW5la1xCdWR5bmVrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Dodaj/pracownik2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9kYWpccHJhY293bmlrMi5jc2h0bWw=
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Dodaj/Karty/Karty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9kYWpcS2FydHlcS2FydHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Dodaj/Pracownik/Pracownik.cshtml]
@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Historia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Index.cshtml]

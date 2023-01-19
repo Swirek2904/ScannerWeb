@@ -7,29 +7,36 @@
     </div>
 
     <div class="mb-3 row">
-        <label for="idBudynku" class="col-form-label col-sm-2">Id Budynku</label>
-        <input asp-for="idBudynku" type="text" class="col-form-control col-sm-4" value="" id="idBudynku" placeholder="Podaj ID budynku:">
-        <span asp-validation-for="idBudynku" class="text-danger"></span>
+            <label asp-for="Skaner.IdBudynku" class="col-form-label col-sm-2">Id Budynku</label>
+            <input asp-for="Skaner.IdBudynku" type="text" class="col-form-control col-sm-4" value="" placeholder="Podaj ID budynku:">
+            <span asp-validation-for="Skaner.IdBudynku" class="text-danger"></span>
      </div>
 
     <div class="mb-3 row">
-        <label for="typAutoryzacji" class="col-form-label col-sm-2">Typ autoryzacji (karta/kod)</label>
-        <input asp-for="typAutoryzacji" type="text" class="col-form-control col-sm-4" id="typAutoryzacji" placeholder="Podaj typ autoryzacji:">
-        <span asp-validation-for="typAutoryzacji" class="text-danger"></span>
+            <label asp-for="Skaner.TypAutoryzacji" class="col-form-label col-sm-2">Typ autoryzacji (karta/kod)</label>
+            <input asp-for="Skaner.TypAutoryzacji" type="text" class="col-form-control col-sm-4" placeholder="Podaj typ autoryzacji:">
+            <span asp-validation-for="Skaner.TypAutoryzacji" class="text-danger"></span>
     </div>
 
     <div class="mb-3 row">
-        <label for="kodOtwarcia" class="col-form-label col-sm-2">Kod otwarcia</label>
-            <input asp-for="kodOtwarcia" type="text" value="" class="col-form-control col-sm-4" id="kodOtwarcia" placeholder="Podaj kod wymagany do otwarcia:">
-        <span asp-validation-for="kodOtwarcia" class="text-danger"></span>
+            <label asp-for="Skaner.KodOtwarcia" class="col-form-label col-sm-2">Kod otwarcia</label>
+            <input asp-for="Skaner.KodOtwarcia" type="text" value="" class="col-form-control col-sm-4" placeholder="Podaj kod wymagany do otwarcia:">
+            <span asp-validation-for="Skaner.KodOtwarcia" class="text-danger"></span>
     </div>
 
     <div class="mb-3 row">
-        <label for="poziomDostepu" class="col-form-label col-sm-2">Poziom dostępu</label>
-            <input asp-for="poziomDostepu" asp-validation-for="poziomDostepu" type="text" class="col-form-control col-sm-4" id="poziomDostepu" placeholder="Podaj poziom dostępu:">
-        <span asp-validation-for="poziomDostepu" class="text-danger"></span>
+            <label asp-for="Skaner.PoziomDostepu" class="col-form-label col-sm-2">Poziom dostępu</label>
+            <input asp-for="Skaner.PoziomDostepu" asp-validation-for="poziomDostepu" type="text" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu:">
+            <span asp-validation-for="Skaner.PoziomDostepu" class="text-danger"></span>
     </div>
 
-    <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton" />
+        <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton">
+        <a class="btn btn-primary" asp-page="/Skaner">Wyczyść</a>
+
     </form>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

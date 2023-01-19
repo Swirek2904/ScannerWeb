@@ -3,26 +3,25 @@
 @{
     <form method="post">
     <div class="mb-4">
-        <span class="display-6">Dodaj dane dla nowego Budynku:</span>
+        <span class="display-6">Dodaj dane dla nowego budynku:</span>
     </div>
-
-        <!--<div class="mb-3 row">
-            <label for="nazwa" class="col-form-label col-sm-2">Nazwa</label>
-            <input asp-for="Nazwa" type="text" class="col-form-control col-sm-4" id="Nazwa" placeholder="Podaj nazwę budynku:">
-            <span asp-validation-for="Nazwa" class="text-danger"></span>
-        </div>-->
 
     <div class="mb-3 row">
         <label for="nazwa" class="col-form-label col-sm-2">Nazwa</label>
-        <input asp-for="Nazwa" type="text" class="col-form-control col-sm-4" id="Nazwa" placeholder="Podaj nazwę budynku:">
-        <span asp-validation-for="Nazwa" class="text-danger"></span>
+        <input asp-for="Budynek.Nazwa" type="text" class="col-form-control col-sm-4" placeholder="Podaj nazwę budynku:">
+            <span asp-validation-for="Budynek.Nazwa" class="text-danger"></span>
     </div>
     <div class="mb-3 row">
         <label for="idSkanera" class="col-form-label col-sm-2">Id Skanera</label>
-        <input asp-for="idSkanera" type="text" class="col-form-control col-sm-4" value="" id="idSkanera" placeholder="Podaj ID Skanera:">
-        <span asp-validation-for="idSkanera" class="text-danger"></span>
+            <input asp-for="Budynek.IdSkanera" type="number" class="col-form-control col-sm-4" placeholder="Podaj ID Skanera:">
+            <span asp-validation-for="Budynek.IdSkanera" class="text-danger"></span>
     </div>
 
-    <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton" />
-    </form>
+    <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton" >
+    <a class="btn btn-primary" asp-page="/Budynek">Wyczyść</a>
+            
+        </form>
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

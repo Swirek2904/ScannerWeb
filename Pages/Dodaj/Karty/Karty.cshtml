@@ -1,0 +1,36 @@
+﻿@page
+@model ScannerWeb.Pages.Karty.KartyModel
+@{
+    <form method="post">
+    <div class="mb-4">
+        <span class="display-6">Dodaj dane dla nowej karty:</span>
+    </div>
+
+    <div class="mb-3 row">
+            <label asp-for="Karty.Uid" class="col-form-label col-sm-2">UID</label>
+            <input asp-for="Karty.Uid" type="text" class="col-form-control col-sm-4" placeholder="Podaj UID karty:">
+            <span asp-validation-for="Karty.Uid" class="text-danger"></span>
+     </div>
+
+    <div class="mb-3 row">
+            <label asp-for="Karty.IdOsoby" class="col-form-label col-sm-2">Id Osoby: </label>
+            <input asp-for="Karty.IdOsoby" type="text" class="col-form-control col-sm-4" placeholder="Podaj identyfikator osoby:">
+            <span asp-validation-for="Karty.IdOsoby" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3 row">
+            <label asp-for="Karty.KodOtwarcia" class="col-form-label col-sm-2">Kod otwarcia</label>
+            <input asp-for="Karty.KodOtwarcia" type="text" value="" class="col-form-control col-sm-4" id="kodOtwarcia" placeholder="Podaj kod wymagany do otwarcia:">
+            <span asp-validation-for="Karty.KodOtwarcia" class="text-danger"></span>
+    </div>
+
+        <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton">
+        <a class="btn btn-primary" asp-page="/Karty">Wyczyść</a>
+
+    </form>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,47 +1,47 @@
 ﻿@page
-@model ScannerWeb.Pages.Dodaj.Pracownik.PracownikModel
+@model ScannerWeb.Pages.Dodaj.PracownikModel
 @{
-    <form method="post">
-    <div class="mb-4">
-        <span class="display-6">Dodaj dane dla nowego pracownika:</span>
-    </div>
-
-    <div class="mb-3 row">
-        <label for="Imie" class="col-form-label col-sm-2">Imię</label>
-        <input type="text" asp-for="Imie" class="col-form-control col-sm-4" id="Imie" placeholder="Podaj imię pracownika:">
-        <span asp-validation-for="Imie" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 row">
-        <label for="Nazwisko" class="col-form-label col-sm-2">Nazwisko</label>
-        <input type="text" asp-for="Nazwisko" class="col-form-control col-sm-4" id="Nazwisko" placeholder="Podaj nazwisko pracownika:">
-        <span asp-validation-for="Nazwisko" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 row">
-        <label for="Pesel" class="col-form-label col-sm-2">Pesel</label>
-        <input type="text" asp-for="Pesel" class="col-form-control col-sm-4" id="Pesel" placeholder="Podaj pesel pracownika:">
-        <span asp-validation-for="Pesel" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 row">
-        <label for="numerTelefonu" class="col-form-label col-sm-2">Numer telefonu</label>
-        <input type="text" asp-for="numerTelefonu" class="col-form-control col-sm-4" id="numerTelefonu" placeholder="Podaj nr tel pracownika:">
-        <span asp-validation-for="numerTelefonu" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 row">
-        <label for="idKarty" class="col-form-label col-sm-2">Id karty</label>
-            <select asp-for="idKarty" value="" asp-items="ViewBag.IdKarty" class="col-form-control col-sm-4" id="idKarty" placeholder="Podaj ID karty pracownika:"></select>
-        <span asp-validation-for="idKarty" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 row">
-        <label for="poziomDostepu" class="col-form-label col-sm-2">Poziom dostępu</label>
-        <input type="text" asp-for="poziomDostepu" class="col-form-control col-sm-4" id="poziomDostepu" placeholder="Podaj poziom dostępu dla pracownika:">
-        <span asp-validation-for="poziomDostepu" class="text-danger"></span>
-    </div>
-
-    <input type="submit" class="btn btn-primary" value="Dodaj" id="submitButton" />
-    </form>
+    
+<div class="mb-4">
+    <span class="display-6">Dodaj dane dla nowego pracownika:</span>
+</div>
+        <form method="post">
+            
+            <div class="mb-3 row">
+                    <label asp-for="Pracownik.Imie" class="col-form-label col-sm-2"></label>
+                <input type="text" asp-for="Pracownik.Imie" class="col-form-control col-sm-4" placeholder="Podaj imię pracownika:" />
+                <span asp-validation-for="Pracownik.Imie" class="text-danger"></span>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="Pracownik.Nazwisko" class="col-form-label col-sm-2"></label>
+                <input type="text" asp-for="Pracownik.Nazwisko" class="col-form-control col-sm-4" placeholder="Podaj nazwisko pracownika:" />
+                <span asp-validation-for="Pracownik.Nazwisko" class="text-danger"></span>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="Pracownik.Pesel" class="col-form-label col-sm-2"></label>
+                <input type="number" asp-for="Pracownik.Pesel" class="col-form-control col-sm-4" placeholder="Podaj pesel pracownika:" />
+                <span asp-validation-for="Pracownik.Pesel" class="text-danger"></span>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="Pracownik.NumerTelefonu" class="col-form-label col-sm-2"></label>
+                <input type="number" asp-for="Pracownik.NumerTelefonu" class="col-form-control col-sm-4" placeholder="Podaj numer telefonu pracownika:" />
+                <span asp-validation-for="Pracownik.NumerTelefonu" class="text-danger"></span>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="Pracownik.IdKarty" class="col-form-label col-sm-2"></label>
+                <select asp-for="Pracownik.IdKarty" class="col-form-control col-sm-4" asp-items="ViewBag.IdKarty"></select>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="Pracownik.PoziomDostepu" class="col-form-label col-sm-2"></label>
+                <input type="text" asp-for="Pracownik.PoziomDostepu" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu dla pracownika:" />
+                <span asp-validation-for="Pracownik.PoziomDostepu" class="text-danger"></span>
+            </div>
+            
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+                <a class="btn btn-primary" asp-page="/Pracownik2">Wyczyść</a>
+            
+        </form>
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

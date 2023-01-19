@@ -1,0 +1,59 @@
+﻿@page
+@model ScannerWeb.Pages.HistoriaModel
+
+@{
+    ViewData["Title"] = "Historia";
+}
+
+<h1>Historia</h1>
+
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Historium[0].Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Historium[0].Czas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Historium[0].TypAutoryzacji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Historium[0].IdOsobyNavigation.Imie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Historium[0].IdOsobyNavigation.Nazwisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Historium[0].IdSkaneraNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Historium) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Czas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypAutoryzacji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOsobyNavigation.Imie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOsobyNavigation.Nazwisko)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSkaneraNavigation.IdSkanera)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
