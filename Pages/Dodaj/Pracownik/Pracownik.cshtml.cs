@@ -25,11 +25,13 @@ namespace ScannerWeb.Pages.Dodaj
 
         public IActionResult OnGet()
         {
-            
-            {
-                ViewData["IdKarty"] = new SelectList(db.Karties, "Uid", "Uid");
-            }
-                
+            var cardNumbers = (from karty in db.Karties
+                               where !(from pracownik in db.Pracowniks
+                                       select pracownik.IdKarty).Contains(karty.Uid)
+                               select karty.Uid).ToList();
+
+            ViewData["IdKarty"] = new SelectList(cardNumbers);
+
             return Page();
 
         }
@@ -37,19 +39,31 @@ namespace ScannerWeb.Pages.Dodaj
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            
-            db.Pracowniks.Add(new Models.Pracownik
+            var cardNumbers = (from karty in db.Karties
+                               where !(from pracownik in db.Pracowniks
+                                       select pracownik.IdKarty).Contains(karty.Uid)
+                               select karty.Uid).ToList();
+            bool peselExist = (from pracownik in db.Pracowniks select pracownik.Pesel).Contains(Pracownik.Pesel);
+
+            if (peselExist)
             {
-                Imie = this.Pracownik.Imie,
-                Nazwisko = this.Pracownik.Nazwisko,
-                Pesel = this.Pracownik.Pesel, 
-                NumerTelefonu = this.Pracownik.NumerTelefonu,
-                IdKarty = this.Pracownik.IdKarty,
-                PoziomDostepu = this.Pracownik.PoziomDostepu
-            });
-            await db.SaveChangesAsync();
-            
-            return RedirectToPage("/Success");
+                ModelState.AddModelError("Pracownik.Pesel", "Taki pesel istnieje w bazie!");
+                ViewData["IdKarty"] = new SelectList(cardNumbers);
+                return Page();
+            }
+           
+            db.Pracowniks.Add(new Models.Pracownik
+                {
+                    Imie = this.Pracownik.Imie,
+                    Nazwisko = this.Pracownik.Nazwisko,
+                    Pesel = this.Pracownik.Pesel,
+                    NumerTelefonu = this.Pracownik.NumerTelefonu,
+                    IdKarty = this.Pracownik.IdKarty,
+                    PoziomDostepu = this.Pracownik.PoziomDostepu
+                });
+                await db.SaveChangesAsync();
+
+                return RedirectToPage("/Success");
             
         }
     }

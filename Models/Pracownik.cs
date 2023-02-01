@@ -9,11 +9,11 @@ public partial class Pracownik
 {
     public int IdPracownik { get; set; }
     [Required(ErrorMessage = "Podaj imie!")]
-    [RegularExpression(@"^[A-ZŁŻ]{1}[a-ząćęłńóśżź]{1,14}$", ErrorMessage = "Imię musi zaczynać się z dużej litery")]
+    [RegularExpression(@"^[A-ZŁŻ]{1}[a-ząćęłńóśżź]{1,14}$", ErrorMessage = "Imię jest niepoprawne")]
     public string Imie { get; set; } = null!;
 
     [Required(ErrorMessage = "Podaj nazwisko!")]
-    [RegularExpression(@"^[A-ZĆŁŃŚŻŹ]{1}[a-ząćęłńóśżź]{1,14}$", ErrorMessage = "Nazwisko musi zaczynać się z dużej litery")]
+    [RegularExpression(@"^[A-ZĆŁŃŚŻŹ]{1}[a-ząćęłńóśżź]{1,24}$", ErrorMessage = "Nazwisko jest niepoprawne")]
     public string Nazwisko { get; set; } = null!;
 
     [StringLength(11,ErrorMessage = "Pesel musi zawierać 11 cyfr!")]
