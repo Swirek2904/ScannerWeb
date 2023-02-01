@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using ScannerWeb.Models;
+using ScannerWeb.Pages.Karty;
 
 namespace ScannerWeb.Pages.Dodaj
 {
@@ -22,14 +25,19 @@ namespace ScannerWeb.Pages.Dodaj
 
         public IActionResult OnGet()
         {
-            ViewData["IdKarty"] = new SelectList(db.Karties, "Uid", "Uid");
+            
+            {
+                ViewData["IdKarty"] = new SelectList(db.Karties, "Uid", "Uid");
+            }
+                
             return Page();
+
         }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-                 
+            
             db.Pracowniks.Add(new Models.Pracownik
             {
                 Imie = this.Pracownik.Imie,

@@ -8,25 +8,33 @@
 
     <div class="mb-3 row">
             <label asp-for="Skaner.IdBudynku" class="col-form-label col-sm-2">Id Budynku</label>
-            <input asp-for="Skaner.IdBudynku" type="text" class="col-form-control col-sm-4" value="" placeholder="Podaj ID budynku:">
+            <input asp-for="Skaner.IdBudynku" type="number" class="col-form-control col-sm-4" value="" placeholder="Podaj ID budynku:">
             <span asp-validation-for="Skaner.IdBudynku" class="text-danger"></span>
      </div>
 
     <div class="mb-3 row">
             <label asp-for="Skaner.TypAutoryzacji" class="col-form-label col-sm-2">Typ autoryzacji (karta/kod)</label>
-            <input asp-for="Skaner.TypAutoryzacji" type="text" class="col-form-control col-sm-4" placeholder="Podaj typ autoryzacji:">
+            <select asp-for="Skaner.TypAutoryzacji" class="col-form-control col-sm-4" placeholder="Podaj typ autoryzacji:">
+                <option value="UID">UID</option>
+                <option value="UK">UK</option>
+                <option value="KOD">KOD</option>
+            </select>
             <span asp-validation-for="Skaner.TypAutoryzacji" class="text-danger"></span>
     </div>
 
     <div class="mb-3 row">
             <label asp-for="Skaner.KodOtwarcia" class="col-form-label col-sm-2">Kod otwarcia</label>
-            <input asp-for="Skaner.KodOtwarcia" type="text" value="" class="col-form-control col-sm-4" placeholder="Podaj kod wymagany do otwarcia:">
+            <input asp-for="Skaner.KodOtwarcia" type="number" value="" class="col-form-control col-sm-4" placeholder="Podaj kod wymagany do otwarcia:">
             <span asp-validation-for="Skaner.KodOtwarcia" class="text-danger"></span>
     </div>
 
     <div class="mb-3 row">
             <label asp-for="Skaner.PoziomDostepu" class="col-form-label col-sm-2">Poziom dostępu</label>
-            <input asp-for="Skaner.PoziomDostepu" asp-validation-for="poziomDostepu" type="text" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu:">
+            <select asp-for="Skaner.PoziomDostepu" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu dla pracownika:">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
             <span asp-validation-for="Skaner.PoziomDostepu" class="text-danger"></span>
     </div>
 

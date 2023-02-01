@@ -8,19 +8,13 @@
 
     <div class="mb-3 row">
             <label asp-for="Karty.Uid" class="col-form-label col-sm-2">UID</label>
-            <input asp-for="Karty.Uid" type="text" class="col-form-control col-sm-4" placeholder="Podaj UID karty:">
+            <input asp-for="Karty.Uid" type="number" class="col-form-control col-sm-4" placeholder="Podaj UID karty:">
             <span asp-validation-for="Karty.Uid" class="text-danger"></span>
      </div>
 
     <div class="mb-3 row">
-            <label asp-for="Karty.IdOsoby" class="col-form-label col-sm-2">Id Osoby: </label>
-            <input asp-for="Karty.IdOsoby" type="text" class="col-form-control col-sm-4" placeholder="Podaj identyfikator osoby:">
-            <span asp-validation-for="Karty.IdOsoby" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3 row">
             <label asp-for="Karty.KodOtwarcia" class="col-form-label col-sm-2">Kod otwarcia</label>
-            <input asp-for="Karty.KodOtwarcia" type="text" value="" class="col-form-control col-sm-4" id="kodOtwarcia" placeholder="Podaj kod wymagany do otwarcia:">
+            <input asp-for="Karty.KodOtwarcia" type="number" value="" class="col-form-control col-sm-4" id="kodOtwarcia" placeholder="Podaj kod wymagany do otwarcia:">
             <span asp-validation-for="Karty.KodOtwarcia" class="text-danger"></span>
     </div>
 

@@ -8,8 +8,6 @@ public partial class Karty
 {
     [Required(ErrorMessage = "Podaj identyfikator karty!")]
     public int Uid { get; set; }
-    [Required(ErrorMessage = "Podaj identyfikator osoby!")]
-    public int IdOsoby { get; set; }
     [Required(ErrorMessage = "Podaj kod otwarcia!")]
     public int? KodOtwarcia { get; set; }
 

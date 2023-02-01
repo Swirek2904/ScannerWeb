@@ -21,7 +21,6 @@ namespace ScannerWeb.Pages.Karty
             db.Karties.Add(new Models.Karty
             {
                 Uid = this.Karty.Uid,
-                IdOsoby = this.Karty.IdOsoby,
                 KodOtwarcia = this.Karty.KodOtwarcia
             });
             await db.SaveChangesAsync();

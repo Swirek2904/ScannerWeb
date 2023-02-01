@@ -7,7 +7,7 @@ namespace ScannerWeb.Models;
 public partial class Budynek
 {
     public int IdBudynku { get; set; }
-    [Required(ErrorMessage ="Podaj nazwę budynku!")]
+    [Required(ErrorMessage = "Podaj nazwę budynku!")]
     public string Nazwa { get; set; } = null!;
     [Required(ErrorMessage = "Podaj identyfikator skanera!")]
     public int IdSkanera { get; set; }

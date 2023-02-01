@@ -24,7 +24,7 @@
             </div>
             <div class="mb-3 row">
                 <label asp-for="Pracownik.NumerTelefonu" class="col-form-label col-sm-2"></label>
-                <input type="number" asp-for="Pracownik.NumerTelefonu" class="col-form-control col-sm-4" placeholder="Podaj numer telefonu pracownika:" />
+                <input type="text" asp-for="Pracownik.NumerTelefonu" class="col-form-control col-sm-4" placeholder="Podaj numer telefonu pracownika:" />
                 <span asp-validation-for="Pracownik.NumerTelefonu" class="text-danger"></span>
             </div>
             <div class="mb-3 row">
@@ -33,7 +33,11 @@
             </div>
             <div class="mb-3 row">
                 <label asp-for="Pracownik.PoziomDostepu" class="col-form-label col-sm-2"></label>
-                <input type="text" asp-for="Pracownik.PoziomDostepu" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu dla pracownika:" />
+                <select asp-for="Pracownik.PoziomDostepu" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu dla pracownika:">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
                 <span asp-validation-for="Pracownik.PoziomDostepu" class="text-danger"></span>
             </div>
             

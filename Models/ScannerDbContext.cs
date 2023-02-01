@@ -80,7 +80,6 @@ public partial class ScannerDbContext : DbContext
             entity.Property(e => e.Uid)
                 .ValueGeneratedNever()
                 .HasColumnName("UID");
-            entity.Property(e => e.IdOsoby).HasColumnName("id_osoby");
             entity.Property(e => e.KodOtwarcia).HasColumnName("kodOtwarcia");
         });
 
