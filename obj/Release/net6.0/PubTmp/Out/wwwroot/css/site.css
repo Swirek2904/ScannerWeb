@@ -24,3 +24,44 @@ body {
     transition: .5s;
 }
 
+.scannerCard {
+    padding:1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    font-size: 15px;
+    transition:.5s;
+}
+
+.scannerCard:hover
+{
+    transform:scale(1.2);
+}
+.mainpage {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+}
+.listMainpage
+{
+    text-align:center;
+    list-style-type:none;
+}
+footer {
+    height: 50px;
+    line-height: 50px;
+}
+
+.skanerId{
+    font-weight:bold;
+    font-size:1.8vh;
+}
+#containerS
+{
+    width:90%;
+    margin:auto;
+}
+@media screen and (max-width: 600px) {
+    .scannerCard:hover {
+        transform: scale(1.1);
+    }
+}

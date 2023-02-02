@@ -1,11 +1,46 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@model ScannerWeb.Pages.MainPageModel
+<h1 class="mainpage">Witaj na stronie głównej skanerów</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Mapa skanerów</p>
-    <img src="~/lib/mapa.png" alt="mapOfScanners" class="img-thumbnail" />
+<br>
+<br>
+<div id="containerS">
+    <div class="row">
+        @foreach (var scanner in Model.Odczyt.Select(x => x.IdSkaneraNavigation.IdSkanera).Distinct())
+        {
+            <div class="scannerCard col btn-primary">
+
+                <div class="skanerId">
+                    Skaner o ID: @scanner
+                </div>
+
+                <ul class="listMainpage">
+                    @{
+                        var lastIndex = Model.Odczyt
+                        .Where(x => x.IdSkaneraNavigation.IdSkanera == scanner)
+                        .LastOrDefault();
+                    }
+                    <li>
+                        Data: @Html.DisplayFor(modelItem => lastIndex.Data)
+
+                    </li>
+                    <li>
+                        Czas: @Html.DisplayFor(modelItem => lastIndex.Czas)
+                    </li>
+                    <li>
+                        Typ autoryzacji: @Html.DisplayFor(modelItem => lastIndex.TypAutoryzacji)
+                    </li>
+                    <li>
+                        Imię i nazwisko: @Html.DisplayFor(modelItem => lastIndex.IdOsobyNavigation.Imie)
+                        @Html.DisplayFor(modelItem => lastIndex.IdOsobyNavigation.Nazwisko)
+                    </li>
+                </ul>
+
+            </div>
+
+        
+        
+        }
+    </div>
 </div>
+

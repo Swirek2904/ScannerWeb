@@ -32,10 +32,10 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Historium) {
+@foreach (var item in Model.Historium.Reverse()) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Data)
+                @Html.DisplayFor(modelItem => item.DataDisplay)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Czas)

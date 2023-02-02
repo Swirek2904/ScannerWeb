@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ScannerWeb.Models;
 
-public partial class Historium
+public partial class MainPage
 {
     public int Id { get; set; }
 
@@ -11,13 +11,12 @@ public partial class Historium
 
     public int IdOsoby { get; set; }
 
-	public DateTime Data { get; set; } = DateTime.Now.Date;
-	public string DataDisplay
-	{
-		get { return Data.ToString("dd.MM.yyyy"); }
-	}
-
-	public TimeSpan Czas { get; set; }
+    public DateTime Data { get; set; } = DateTime.Now.Date;
+    public string DataDisplay
+    {
+        get { return Data.ToString("dd.MM.yyyy"); }
+    }
+    public TimeSpan Czas { get; set; }
 
     public string TypAutoryzacji { get; set; } = null!;
 
