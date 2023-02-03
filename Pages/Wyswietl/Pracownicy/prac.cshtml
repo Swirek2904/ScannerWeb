@@ -1,0 +1,66 @@
+﻿@page
+@model ScannerWeb.Pages.pracModel
+@{
+}
+
+<h1>Lista Pracowników</h1>
+
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].IdPracownik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].Imie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].Nazwisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].NumerTelefonu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].Pesel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].PoziomDostepu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prac[0].IdKarty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var worker in Model.Prac)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.IdPracownik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.Imie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.Nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.NumerTelefonu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.Pesel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.PoziomDostepu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => worker.IdKarty)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

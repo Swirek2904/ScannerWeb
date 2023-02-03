@@ -1,0 +1,44 @@
+﻿@page
+@model ScannerWeb.Pages.budModel
+@{
+}
+
+<h1>Lista Budynków</h1>
+
+
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.bud[0].IdBudynku)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bud[0].Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bud[0].IdSkanera)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bud in Model.bud)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => bud.IdBudynku)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => bud.Nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => bud.IdSkanera)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

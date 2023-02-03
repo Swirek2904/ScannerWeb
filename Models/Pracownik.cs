@@ -22,8 +22,7 @@ public partial class Pracownik
     public string Pesel { get; set; } = null!;
 
     [Required(ErrorMessage = "Podaj numer telefonu! ")]
-
-    [RegularExpression(@"^\(?([0-9]{3})\)?[\-]?([0-9]{3})[\-]?([0-9]{3})$", ErrorMessage = "Podaj poprawny nr telefonu (9 cyfr)")]
+    [RegularExpression(@"^(\d{3}[-]\d{3}[-]\d{3}|\d{9})$", ErrorMessage = " Numer musi składać się z 9 cyfr, akceptowalny format to XXX-YYY-ZZZ lub XXXYYYZZZ.")]
     public string NumerTelefonu { get; set; } = null!;
 
     public int IdKarty { get; set; }

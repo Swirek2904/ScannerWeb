@@ -52,6 +52,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VjY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Wyswietl/Budynki/bud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV3lzd2lldGxcQnVkeW5raVxidWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Wyswietl/Pracownicy/prac.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV3lzd2lldGxcUHJhY293bmljeVxwcmFjLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/Wyswietl/Skanery/skan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV3lzd2lldGxcU2thbmVyeVxza2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Krystian/source/repos/ScannerWeb/ScannerWeb/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,65 @@
+﻿@page
+@model ScannerWeb.Pages.skanModel
+@{
+}
+
+<h1>Lista Skanerów</h1>
+
+
+
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ska[0].IdSkanera)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Budynki[0].Nazwa)
+            </td>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ska[0].PoziomDostepu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ska[0].KodOtwarcia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ska[0].TypAutoryzacji)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ska in Model.ska)
+        {
+
+                <tr>
+                    <td>
+                    @Html.DisplayFor(modelItem => ska.IdSkanera)
+                    </td>
+                @{
+                    var Bud = Model.Budynki
+                    .Where(x => x.IdBudynku == ska.IdBudynku)
+                    .LastOrDefault();
+                }
+                    <td>
+                    @Html.DisplayFor(modelItem => Bud.Nazwa)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => ska.PoziomDostepu)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => ska.KodOtwarcia)
+                    </td>
+                     <td>
+                    @Html.DisplayFor(modelItem => ska.TypAutoryzacji)
+                    </td>
+
+
+                </tr>
+        }
+    </tbody>
+</table>
+
+

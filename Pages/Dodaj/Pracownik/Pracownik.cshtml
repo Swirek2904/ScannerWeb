@@ -8,31 +8,31 @@
         <form method="post">
             
             <div class="mb-3 row">
-                    <label asp-for="Pracownik.Imie" class="col-form-label col-sm-2"></label>
+                <label asp-for="Pracownik.Imie" class="col-form-label col-sm-2">Imię</label>
                 <input type="text" asp-for="Pracownik.Imie" class="col-form-control col-sm-4" placeholder="Podaj imię pracownika:" />
                 <span asp-validation-for="Pracownik.Imie" class="text-danger"></span>
             </div>
             <div class="mb-3 row">
-                <label asp-for="Pracownik.Nazwisko" class="col-form-label col-sm-2"></label>
+                <label asp-for="Pracownik.Nazwisko" class="col-form-label col-sm-2">Nazwisko</label>
                 <input type="text" asp-for="Pracownik.Nazwisko" class="col-form-control col-sm-4" placeholder="Podaj nazwisko pracownika:" />
                 <span asp-validation-for="Pracownik.Nazwisko" class="text-danger"></span>
             </div>
             <div class="mb-3 row">
-                <label asp-for="Pracownik.Pesel" class="col-form-label col-sm-2"></label>
+                <label asp-for="Pracownik.Pesel" class="col-form-label col-sm-2">Pesel</label>
                 <input type="number" asp-for="Pracownik.Pesel" class="col-form-control col-sm-4" placeholder="Podaj pesel pracownika:" />
                 <span asp-validation-for="Pracownik.Pesel" class="text-danger"></span>
             </div>
             <div class="mb-3 row">
-                <label asp-for="Pracownik.NumerTelefonu" class="col-form-label col-sm-2"></label>
+                <label asp-for="Pracownik.NumerTelefonu" class="col-form-label col-sm-2">Numer Telefonu</label>
                 <input type="text" asp-for="Pracownik.NumerTelefonu" class="col-form-control col-sm-4" placeholder="Podaj numer telefonu pracownika:" />
                 <span asp-validation-for="Pracownik.NumerTelefonu" class="text-danger"></span>
             </div>
             <div class="mb-3 row">
-                <label asp-for="Pracownik.IdKarty" class="col-form-label col-sm-2"></label>
+            <label asp-for="Pracownik.IdKarty" class="col-form-label col-sm-2">IdKarty</label>
                 <select asp-for="Pracownik.IdKarty" class="col-form-control col-sm-4" asp-items="ViewBag.IdKarty"></select>
             </div>
             <div class="mb-3 row">
-                <label asp-for="Pracownik.PoziomDostepu" class="col-form-label col-sm-2"></label>
+                <label asp-for="Pracownik.PoziomDostepu" class="col-form-label col-sm-2">Poziom Dostępu</label>
                 <select asp-for="Pracownik.PoziomDostepu" class="col-form-control col-sm-4" placeholder="Podaj poziom dostępu dla pracownika:">
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -42,7 +42,7 @@
             </div>
             
                 <input type="submit" value="Dodaj" class="btn btn-primary" />
-                <a class="btn btn-primary" asp-page="/Pracownik2">Wyczyść</a>
+                <a class="btn btn-primary" asp-page="/Pracownik">Wyczyść</a>
             
         </form>
 }

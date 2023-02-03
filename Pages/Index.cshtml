@@ -1,5 +1,5 @@
 ﻿@page
-@model ScannerWeb.Pages.MainPageModel
+@model ScannerWeb.Pages.IndexModel
 <h1 class="mainpage">Witaj na stronie głównej skanerów</h1>
 
 <br>
@@ -17,15 +17,24 @@
                 <ul class="listMainpage">
                     @{
                         var lastIndex = Model.Odczyt
-                        .Where(x => x.IdSkaneraNavigation.IdSkanera == scanner)
-                        .LastOrDefault();
+                       .Where(x => x.IdSkaneraNavigation.IdSkanera == scanner)
+                       .LastOrDefault();
                     }
+
                     <li>
-                        Data: @Html.DisplayFor(modelItem => lastIndex.Data)
+                        @{
+                            var Bud = Model.Budynki
+                            .Where(x => x.IdSkanera == scanner)
+                            .LastOrDefault();
+                        }
+                        Budynek: @Html.DisplayFor(modelItem => Bud.Nazwa)
+                    </li>
+                    <li>
+                        Data: @Html.DisplayFor(modelItem => lastIndex.DataDisplay)
 
                     </li>
                     <li>
-                        Czas: @Html.DisplayFor(modelItem => lastIndex.Czas)
+                        Czas: @Html.DisplayFor(modelItem => lastIndex.CzasDisplay)
                     </li>
                     <li>
                         Typ autoryzacji: @Html.DisplayFor(modelItem => lastIndex.TypAutoryzacji)
@@ -34,6 +43,7 @@
                         Imię i nazwisko: @Html.DisplayFor(modelItem => lastIndex.IdOsobyNavigation.Imie)
                         @Html.DisplayFor(modelItem => lastIndex.IdOsobyNavigation.Nazwisko)
                     </li>
+                    
                 </ul>
 
             </div>

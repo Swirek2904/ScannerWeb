@@ -33,7 +33,6 @@ namespace ScannerWeb.Pages.Dodaj
             ViewData["IdKarty"] = new SelectList(cardNumbers);
 
             return Page();
-
         }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -43,6 +42,7 @@ namespace ScannerWeb.Pages.Dodaj
                                where !(from pracownik in db.Pracowniks
                                        select pracownik.IdKarty).Contains(karty.Uid)
                                select karty.Uid).ToList();
+
             bool peselExist = (from pracownik in db.Pracowniks select pracownik.Pesel).Contains(Pracownik.Pesel);
 
             if (peselExist)

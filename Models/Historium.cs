@@ -18,6 +18,10 @@ public partial class Historium
 	}
 
 	public TimeSpan Czas { get; set; }
+    public string CzasDisplay
+    {
+        get { return Czas.ToString("hh\\:mm\\:ss"); }
+    }
 
     public string TypAutoryzacji { get; set; } = null!;
 
